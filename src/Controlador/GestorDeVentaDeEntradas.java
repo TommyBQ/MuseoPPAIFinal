@@ -1,12 +1,13 @@
-package Controlador;
+package controlador;
 
-import Modelos.*;
+import modelos.*;
 import VistasFX.InterfazImpresora;
 import VistasFX.InterfazPantallaPrincipal;
 import VistasFX.PantallaDeVentaDeEntradas;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.Random;
 
 // PATRÓN CONTROLADOR
@@ -55,11 +56,12 @@ public class GestorDeVentaDeEntradas  {
         tarifas[3]=new Tarifa(LocalDate.of(2021,2,22),LocalDate.of(2021,2,20),80,15,tipoDeEntradas[3],tipoVisitas[3]);
 
 
+        // Cargo tipos de exposiciones
         TipoExposicion[] tipoExposicion = new TipoExposicion[4];
-        tipoExposicion[0]= new TipoExposicion("Primer Tipo","Nombre1");
-        tipoExposicion[1]= new TipoExposicion("Segundo Tipo","Nombre2");
-        tipoExposicion[2]= new TipoExposicion("Tercer Tipo","Nombre3");
-        tipoExposicion[3]= new TipoExposicion("Cuarto Tipo","Nombre4");
+        tipoExposicion[0]= new TipoExposicion("Exposición guiada permanente","Con guía" , true );
+        tipoExposicion[1]= new TipoExposicion("Exposición guiada temporal","Temporal con guía" ,  false);
+        tipoExposicion[2]= new TipoExposicion("Exposición sin guía permanente","Sin guía" ,  true);
+        tipoExposicion[3]= new TipoExposicion("Exposición sin guía temporal ","Temporal Sin guia" ,  false);
         Cargo[] cargos=new Cargo[2];
         cargos[0]=new Cargo("Responsable de Obra","Responsable");
         cargos[1]=new Cargo("Responsable de Obra","Responsable");
@@ -150,11 +152,11 @@ public class GestorDeVentaDeEntradas  {
         paredes[0]=new Pared("Uno",20,20);
         paredes[1]=new Pared("Uno",20,20);
 
-        DetalleExposicion1[] detalleExposiciones = new DetalleExposicion1[4];
-        detalleExposiciones[0]=new DetalleExposicion1("lugar1",obras[0],paredes[0]);
-        detalleExposiciones[1]=new DetalleExposicion1("lugar1",obras[1],paredes[1]);
-        detalleExposiciones[2]=new DetalleExposicion1("lugar1",obras[2],paredes[0]);
-        detalleExposiciones[3]=new DetalleExposicion1("lugar1",obras[3],paredes[1]);
+        DetalleExposicion[] detalleExposiciones = new DetalleExposicion[4];
+        detalleExposiciones[0]=new DetalleExposicion("lugar1",obras[0],paredes[0]);
+        detalleExposiciones[1]=new DetalleExposicion("lugar1",obras[1],paredes[1]);
+        detalleExposiciones[2]=new DetalleExposicion("lugar1",obras[2],paredes[0]);
+        detalleExposiciones[3]=new DetalleExposicion("lugar1",obras[3],paredes[1]);
 
         PublicoDestino[] publicoDestinos=new PublicoDestino[2];
         publicoDestinos[0]=new PublicoDestino("Caracteristica uno"," uno");
@@ -243,10 +245,14 @@ public class GestorDeVentaDeEntradas  {
     }
 
     public float calcularDuracionEstimada(){
-        this.duracionEstimada = this.sedes[0].getDuracion();
 
-        return this.duracionEstimada;
+        IEstrategiaDuracionEstimada estrategia_duracion =new EstrategiaVisitaCompleta();
+        float duracion = estrategia_duracion.calcularDuracionVisita(this.sedes[0]  , this.sedes[0].getExposiciones() , new Date());
+
+        return duracion;
     }
+
+
 
     public static int tomarSeleccionDeEntradas(int cantidadEntradas){
         cantidadDeEntradas = cantidadEntradas;

@@ -1,6 +1,5 @@
-package Modelos;
+package modelos;
 
-import VistasFX.InterfazPantallaPrincipal;
 import VistasFX.InterfazPantallaSala;
 
 import java.util.Arrays;

@@ -1,15 +1,21 @@
-package Modelos;
+package modelos;
 
 public class TipoExposicion {
     private String descripcion;
     private String nombre;
+    private Boolean tieneGuia;
+    private Boolean esPermanente;
 
-    public TipoExposicion() {
-    }
-
-    public TipoExposicion(String descripcion, String nombre) {
+    public TipoExposicion(String descripcion, String nombre , Boolean esPermanente) {
         this.descripcion = descripcion;
         this.nombre = nombre;
+        this.esPermanente = esPermanente;
+
+    }
+
+
+    public Boolean getEsPermanente() {
+        return esPermanente;
     }
 
     public String getDescripcion() {

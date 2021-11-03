@@ -1,8 +1,8 @@
 package VistasFX;
 
-import Controlador.GestorDeVentaDeEntradas;
-import Modelos.TablaEntradas;
-import Modelos.Tarifa;
+import controlador.GestorDeVentaDeEntradas;
+import modelos.TablaEntradas;
+import modelos.Tarifa;
 import javafx.animation.PauseTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;

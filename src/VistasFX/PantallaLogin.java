@@ -1,6 +1,6 @@
 package VistasFX;
 
-import Modelos.Encryptor;
+import modelos.Encryptor;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -59,7 +59,7 @@ public class PantallaLogin extends Application
         Scene scene = new Scene(root);
         stage.setTitle("Museo Pictórico");
 
-        Image icon = new Image("/Imagenes/icon.png");
+        Image icon = new Image("/imagenes/icon.png");
         stage.getIcons().add(icon);
 
         stage.setScene(scene);

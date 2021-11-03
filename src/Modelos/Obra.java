@@ -1,8 +1,7 @@
-package Modelos;
+package modelos;
 
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Date;
 
 public class Obra{
    private float alto;
@@ -96,8 +95,10 @@ public class Obra{
     }
 
     public float getDuracionExtendida() {
-        return duracionExtendida;
+        return this.duracionExtendida;
     }
+
+    public float getDuracionResumida(){return this.duracionResumida; }
 
     public void setDuracionExtendida(float duracionExtendida) {
         this.duracionExtendida = duracionExtendida;
@@ -284,8 +285,6 @@ public class Obra{
                 '}';
     }
 
-    public float getDuracionResumida(){
 
-        return this.duracionResumida;
-    }
+
 }

@@ -1,6 +1,4 @@
-package Modelos;
-
-import java.util.List;
+package modelos;
 
 public class Restaurador {
 

@@ -1,6 +1,6 @@
 package VistasFX;
 
-import Modelos.Entrada;
+import modelos.Entrada;
 
 public class InterfazImpresora {
     private static InterfazImpresora instance;

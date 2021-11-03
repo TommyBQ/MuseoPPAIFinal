@@ -1,19 +1,18 @@
 package modelos;
 
-public class DetalleExposicion1 {
+public class DetalleExposicion {
     private String lugarAsignado;
     private Obra obra;
     private Pared pared;
-    private float sumaDuracion =0;
-
-    public DetalleExposicion1() {
+    public DetalleExposicion() {
     }
 
-    public DetalleExposicion1(String lugarAsignado, Obra obra, Pared pared) {
+    public DetalleExposicion(String lugarAsignado, Obra obra, Pared pared) {
         this.lugarAsignado = lugarAsignado;
         this.obra = obra;
         this.pared = pared;
     }
+
 
     public String getLugarAsignado() {
         return lugarAsignado;
@@ -39,12 +38,7 @@ public class DetalleExposicion1 {
         this.pared = pared;
     }
 
-    public DetalleExposicion1(String lugarAsignado, Obra obra, Pared pared, float sumaDuracion) {
-        this.lugarAsignado = lugarAsignado;
-        this.obra = obra;
-        this.pared = pared;
-        this.sumaDuracion = sumaDuracion;
-    }
+
 
     @Override
     public String toString() {
@@ -52,14 +46,17 @@ public class DetalleExposicion1 {
                 "lugarAsignado='" + lugarAsignado + '\'' +
                 ", obra=" + obra +
                 ", pared=" + pared +
-                ", sumaDuracion=" + sumaDuracion +
+                ", duracion_extendida =" + this.sumarDuracionExtendida() +
+                ", duracion_resumida =" + this.sumarDuracionResumida() +
                 '}';
     }
 
     public float sumarDuracionResumida(){
-        this.sumaDuracion=this.sumaDuracion+this.obra.getDuracionResumida();
-        //System.out.println("\n\nLA SUMA ES EN DETALLE"+sumaDuracion);
-        return this.sumaDuracion;
+        return this.obra.getDuracionResumida();
+    }
+
+    public float sumarDuracionExtendida(){
+        return this.obra.getDuracionResumida();
 
     }
 }

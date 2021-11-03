@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="241.0" fitWidth="247.0" layoutX="192.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/icon.png" />
+            <Image url="@../imagenes/icon.png" />
          </image>
       </ImageView>
       <Text layoutX="192.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" />
@@ -23,17 +23,17 @@
       <Button fx:id="ingresar" layoutX="347.0" layoutY="332.0" mnemonicParsing="false" onAction="#loginHandler" prefHeight="25.0" prefWidth="70.0" text="Ingresar" />
       <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="192.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/google.png" />
+            <Image url="@../imagenes/google.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="221.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/facebook.png" />
+            <Image url="@../imagenes/facebook.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="252.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Imagenes/instagram.png" />
+            <Image url="@../imagenes/instagram.png" />
          </image>
       </ImageView>
       <PasswordField fx:id="contraField" layoutX="189.0" layoutY="298.0" prefHeight="25.0" prefWidth="225.0" />

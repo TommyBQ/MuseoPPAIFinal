@@ -1,4 +1,4 @@
-package Modelos;
+package modelos;
 
 public class Tecnica {
     private String descripcion;

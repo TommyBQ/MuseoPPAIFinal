@@ -1,7 +1,6 @@
-package Modelos;
+package modelos;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class AsignacionVisita {
     private LocalDate fechaHoraFin;
