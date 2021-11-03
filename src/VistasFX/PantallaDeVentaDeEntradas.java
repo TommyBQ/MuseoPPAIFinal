@@ -88,7 +88,14 @@ public class PantallaDeVentaDeEntradas {
         scene = new Scene(root);
         stage.setScene(scene);
 
+
+        // se require tener un selector en pantalla para la sede seleccionada y enviar ese
+        // objeto al método registrarVentaDeEntrada( Sede )
+
+
         GestorDeVentaDeEntradas gestorDeVentaDeEntradas = GestorDeVentaDeEntradas.getInstance();
+
+        // setear sede actual
         gestorDeVentaDeEntradas.registrarVentaDeEntrada();
 
         tomarSeleccionDeEntradas();

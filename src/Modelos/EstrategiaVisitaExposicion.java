@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EstrategiaVisitaExposicion implements IEstrategiaDuracionEstimada {
-
-
     public EstrategiaVisitaExposicion(){
-
     }
-
     @Override
     public float calcularDuracionVisita(Sede s, Exposicion[] exp , Date fecha ) {
         //

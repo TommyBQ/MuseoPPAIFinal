@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EstrategiaVisitaCompleta implements IEstrategiaDuracionEstimada {
-
-
     public EstrategiaVisitaCompleta(){
-
     }
-
     @Override
     public float calcularDuracionVisita(Sede s, Exposicion[] exp , Date fecha) {
-
-        //
         // debe retornar duración completa
         float duracion_total = 0.0F;
         ArrayList<Exposicion> exp_vigentes = new ArrayList<Exposicion>();
@@ -31,7 +25,6 @@ public class EstrategiaVisitaCompleta implements IEstrategiaDuracionEstimada {
                 duracion_total = duracion_total + de.sumarDuracionResumida();
             }
         }
-
         return duracion_total;
     }
 }

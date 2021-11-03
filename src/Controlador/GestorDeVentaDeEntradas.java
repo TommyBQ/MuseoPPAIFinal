@@ -231,13 +231,17 @@ public class GestorDeVentaDeEntradas  {
 
     public Tarifa[] buscarTarifas(){
 
-        this.tarifas = this.sedes[0].conocerTarifa();
+        this.tarifas = this.sedeActual.conocerTarifa();
 
         //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
 
-
         return this.tarifas;
     }
+
+    public void setSedeActual(Sede sedeActual) {
+        this.sedeActual = sedeActual;
+    }
+
 
     public static Tarifa tomarSeleccionTarifa(Tarifa tarifa){
         tarifaSelecionada = tarifa;
@@ -245,13 +249,9 @@ public class GestorDeVentaDeEntradas  {
     }
 
     public float calcularDuracionEstimada(){
-
         IEstrategiaDuracionEstimada estrategia_duracion =new EstrategiaVisitaCompleta();
-        float duracion = estrategia_duracion.calcularDuracionVisita(this.sedes[0]  , this.sedes[0].getExposiciones() , new Date());
-
-        return duracion;
+        return estrategia_duracion.calcularDuracionVisita(this.sedes[0]  , this.sedes[0].getExposiciones() , new Date());
     }
-
 
 
     public static int tomarSeleccionDeEntradas(int cantidadEntradas){
