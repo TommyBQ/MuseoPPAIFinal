@@ -20,7 +20,7 @@ public class GestorDeVentaDeEntradas  {
     private static Tarifa tarifaSelecionada;
     private float duracionEstimada;
     private boolean esMenorCantidad=false;
-    private Sede[] sedes;
+    public Sede[] sedes;
     public Sede sedeActual;
     private ReservaVisita[] reservasVisita;
     private Entrada[] entradasACrear;
@@ -224,18 +224,27 @@ public class GestorDeVentaDeEntradas  {
     }
 
     public void registrarVentaDeEntrada(){
-        PantallaDeVentaDeEntradas.mostrarTarifas(this.buscarTarifas());
+        PantallaDeVentaDeEntradas.mostrarTarifas(this.buscarTarifas(sedes[0]));
         duracionEstimada= this.calcularDuracionEstimada();
         //getDate();
     }
 
-    public Tarifa[] buscarTarifas(){
+    public Tarifa[] buscarTarifas(Sede s){
 
+<<<<<<< Updated upstream
         this.tarifas = this.sedeActual.conocerTarifa();
 
         //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
 
         return this.tarifas;
+=======
+        Tarifa[] tarifas_result = s.conocerTarifa();
+
+        //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
+
+
+        return tarifas_result;
+>>>>>>> Stashed changes
     }
 
     public void setSedeActual(Sede sedeActual) {
