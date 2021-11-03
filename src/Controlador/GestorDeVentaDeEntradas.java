@@ -231,18 +231,20 @@ public class GestorDeVentaDeEntradas  {
 
     public Tarifa[] buscarTarifas(Sede s){
 
-
+<<<<<<< Updated upstream
         this.tarifas = this.sedeActual.conocerTarifa();
 
         //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
 
         return this.tarifas;
+=======
         Tarifa[] tarifas_result = s.conocerTarifa();
 
         //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
 
 
         return tarifas_result;
+>>>>>>> Stashed changes
     }
 
     public void setSedeActual(Sede sedeActual) {
