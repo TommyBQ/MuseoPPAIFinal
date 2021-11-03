@@ -222,19 +222,19 @@ public class GestorDeVentaDeEntradas  {
     }
 
     public void registrarVentaDeEntrada(){
-        PantallaDeVentaDeEntradas.mostrarTarifas(this.buscarTarifas());
+        PantallaDeVentaDeEntradas.mostrarTarifas(this.buscarTarifas(sedes[0]));
         duracionEstimada= this.calcularDuracionEstimada();
         //getDate();
     }
 
-    public Tarifa[] buscarTarifas(){
+    public Tarifa[] buscarTarifas(Sede s){
 
-        this.tarifas = this.sedes[0].conocerTarifa();
+        Tarifa[] tarifas_result = s.conocerTarifa();
 
         //PantallaDeVentaDeEntradas.mostrarTarifas(this.tarifas);
 
 
-        return this.tarifas;
+        return tarifas_result;
     }
 
     public static Tarifa tomarSeleccionTarifa(Tarifa tarifa){
