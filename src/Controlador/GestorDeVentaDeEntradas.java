@@ -1,6 +1,6 @@
-package controlador;
+package Controlador;
 
-import modelos.*;
+import Modelos.*;
 import VistasFX.InterfazImpresora;
 import VistasFX.InterfazPantallaPrincipal;
 import VistasFX.PantallaDeVentaDeEntradas;
